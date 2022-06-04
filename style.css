@@ -31,8 +31,14 @@ body {
   padding-inline: 2rem;
 }
 
-.blur {
-  filter: blur(3px);
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+
+  margin-inline: auto;
+
+  animation: 6s appear ease forwards;
 }
 
 
@@ -71,6 +77,10 @@ body {
   animation: top-down 1.5s ease forwards;
 }
 
+.header-content p {
+  display: none;
+}
+
 
 
 /*==== MENU SECTION ==============================*/
@@ -80,19 +90,12 @@ body {
 }
 
 .menu-info p {
-  font-family: 'Palanquin', sans-serif;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  color: var(--paragraph-color);
-  text-align: center;
-
   width: min(76.8rem, 100%);
 
+  color: var(--paragraph-color);
+  line-height: 2rem;
+
   padding-inline: 2rem;
-
-  margin-inline: auto;
-
-  animation: 6s appear ease forwards;
 }
 
 .menu-options {
@@ -138,6 +141,16 @@ body {
   background-color: var(--card-span-bg-color);
 }
 
+
+
+
+footer {
+  padding-bottom: 6rem;
+}
+
+
+
+
 .menu-options div:nth-of-type(1) {
   animation: 1.5s left-right 1s ease forwards;
 }
@@ -152,6 +165,14 @@ body {
 
 .menu-options div:nth-of-type(4) {
   animation: 1.5s right-left 2.5s ease forwards;
+}
+
+.menu-options div:nth-of-type(5) {
+  animation: 1.5s left-right 3s ease forwards;
+}
+
+.menu-options div:nth-of-type(6) {
+  animation: 1.5s right-left 3.5s ease forwards;
 }
 
 
@@ -226,7 +247,8 @@ body {
     grid-template-areas: 
     'A D'
     'B D'
-    'B C';
+    'B C'
+    'E F';
   }
 
   .menu-options div:nth-of-type(1) {
@@ -244,26 +266,104 @@ body {
   .menu-options div:nth-of-type(4) {
     grid-area: D;
   }
+
+  .menu-options div:nth-of-type(5) {
+    grid-area: E;
+  }
+
+  .menu-options div:nth-of-type(6) {
+    grid-area: F;
+  }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .container {
-    width: 144rem;
+    width: 102.4rem;
   }
 
   .menu-options {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    'A B D'
-    'C B D';
+    'A B E'
+    'D B F'
+    'D C F';
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    display: grid;
+    grid-template-columns: 37.7rem 1fr;
+    grid-template-areas: 
+    'A B'
+    'A C';
   }
 
-  .menu-options div:nth-of-type(2) img,
-  .menu-options div:nth-of-type(4) img {
-    object-fit: cover;
+  header {
+    grid-area: A;
+  }
 
-    border-radius: 2rem;
+  main {
+    grid-area: B;
+  }
 
+  footer {
+    grid-area: C;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+
+
+
+
+
+  .header-content {
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .header-content img {
+    height: 16.7rem;
+    width: 21.5rem;
+
+    margin-block: 0;
+    margin-inline: auto;
+  }
+
+  .header-content h1 {
+    padding-block: 2rem;
+  }
+
+  .header-content p {
+    display: block;
+
+    width: 27rem;
+
+    color: white;
+    line-height: 2.6rem;
+  }
+
+  
+
+  .menu-content {
+    padding: 0;
+  }
+
+  .menu-info p {
+    display: none;
+  }
+
+  
+
+  footer {
+    align-self: flex-start;
+
+    padding-bottom: 0;
   }
 }
