@@ -143,6 +143,7 @@ p {
 
 
 
+/*==== FOOTER ==============================*/
 
 footer {
   padding-bottom: 6rem;
@@ -150,6 +151,7 @@ footer {
 
 
 
+/*==== ANIMATIONS ==============================*/
 
 .menu-options div:nth-of-type(1) {
   animation: 1.5s left-right 1s ease forwards;
@@ -174,7 +176,6 @@ footer {
 .menu-options div:nth-of-type(6) {
   animation: 1.5s right-left 3.5s ease forwards;
 }
-
 
 
 @keyframes appear {
@@ -237,10 +238,15 @@ footer {
 
 
 
+/*==== RESPONSIVE ==============================*/
+
 @media (min-width: 768px) {
   .container {
     width: 76.8rem;
   }
+
+
+  /*==== MENU SECTION ==============================*/
 
   .menu-options {
     grid-template-columns: 1fr 1fr;
@@ -276,6 +282,7 @@ footer {
   }
 }
 
+
 @media (min-width: 1024px) {
   .container {
     width: 102.4rem;
@@ -289,6 +296,7 @@ footer {
     'D C F';
   }
 }
+
 
 @media (min-width: 1280px) {
   body {
@@ -316,9 +324,7 @@ footer {
   }
 
 
-
-
-
+  /*==== HEADER ==============================*/
 
   .header-content {
     height: 100%;
@@ -349,7 +355,8 @@ footer {
     line-height: 2.6rem;
   }
 
-  
+
+  /*==== MENU SECTION ==============================*/
 
   .menu-content {
     padding: 0;
@@ -360,6 +367,7 @@ footer {
   }
 
   
+  /*==== FOOTER ==============================*/
 
   footer {
     align-self: flex-start;
