@@ -372,6 +372,6 @@ footer {
   footer {
     align-self: flex-start;
 
-    padding-bottom: 0;
+    padding-block: 2rem 0;
   }
 }
